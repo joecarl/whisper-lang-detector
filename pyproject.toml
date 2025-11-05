@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whisper-lang-detector"
+version = "0.1.0"
+description = "Language detection using OpenAI Whisper"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "Whisper Lang Detector Team"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+# Dependencias de producción
+dependencies = [
+    "openai-whisper",
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "pymediainfo",
+    "webrtcvad",
+    "pydub",
+]
+
+# Dependencias opcionales (grupos)
+[project.optional-dependencies]
+dev = [
+    "jupyter",
+    "ipykernel",
+    "black",
+    "flake8",
+    "pylint",
+    "isort",
+    "pytest",
+    "pytest-cov",
+    "mypy",
+]
+cuda = [
+    "torchvision>=0.15.0",
+]
+
+[project.scripts]
+whisper-lang-detector = "src.main:main"
+whisper-lang-detector-download = "download_model:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.black]
+line-length = 160
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3

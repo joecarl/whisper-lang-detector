@@ -1,0 +1,40 @@
+{
+    "name": "Whisper Lang Detector",
+    "dockerFile": "Dockerfile",
+    "runArgs": [
+        "--gpus=all",
+        "--shm-size=2g"
+    ],
+    "mounts": [
+        "source=/<your_drive>,target=/<your_drive>,type=bind"
+    ],
+    "postCreateCommand": "pip install -e .[dev]",
+    "forwardPorts": [
+        8888,
+        8000
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.flake8",
+                "ms-python.pylint",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "ms-toolsai.jupyter",
+                "formulahendry.code-runner",
+                "streetsidesoftware.code-spell-checker"
+            ],
+            "settings": {
+                "python.formatting.provider": "black",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.linting.flake8Enabled": true,
+                "python.linting.lintOnSave": true,
+                "editor.formatOnSave": true,
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit"
+                }
+            }
+        }
+    }
+}

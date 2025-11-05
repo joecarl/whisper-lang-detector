@@ -1,0 +1,10 @@
+README.md
+docker-compose.yaml
+.git
+.gitignore
+*.pyc
+__pycache__
+*.bak
+*.old
+tmp/
+run.sh

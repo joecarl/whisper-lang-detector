@@ -1,0 +1,14 @@
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+build/
+dist/
+logs/
+whisper_models/
+.venv/
+tmpaudio
+test.sh
