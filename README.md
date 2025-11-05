@@ -16,7 +16,7 @@ whisper-lang-detector/
 │   ├── track_analyzer.py        # Análisis de pistas de audio
 │   ├── video_processor.py       # Lógica principal de procesamiento
 │   └── main.py                  # Interfaz CLI y punto de entrada
-├── whisper_models/              # Directorio para modelos de Whisper
+├── whisper_models/              # Directorio para modelos de Whisper (opcional, por defecto se descargan automaticamente)
 │   └── base.pt                  # Modelo base de Whisper
 ├── Dockerfile                   # Definición de imagen Docker
 ├── pyproject.toml              # Configuración del proyecto Python
