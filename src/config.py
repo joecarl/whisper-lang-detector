@@ -9,35 +9,48 @@ from datetime import datetime
 # Mapeo de códigos de idioma de Whisper (ISO 639-1) a ISO 639-2/T (terminológico)
 # Usamos códigos terminológicos que son los estándares actuales
 WHISPER_TO_ISO639_2 = {
-    "en": "eng",
-    "es": "spa",
-    "fr": "fra",  # No "fre" (bibliográfico)
-    "de": "deu",  # No "ger" (bibliográfico)
-    "it": "ita",
-    "pt": "por",
-    "ru": "rus",
-    "ja": "jpn",
-    "ko": "kor",
-    "zh": "zho",  # No "chi" (bibliográfico)
-    "ar": "ara",
-    "ca": "cat",
-    "cs": "ces",  # No "cze" (bibliográfico)
-    "da": "dan",
-    "nl": "nld",  # No "dut" (bibliográfico)
-    "fi": "fin",
-    "el": "ell",  # No "gre" (bibliográfico)
-    "he": "heb",
-    "hi": "hin",
-    "hu": "hun",
-    "id": "ind",
-    "no": "nor",
-    "pl": "pol",
-    "ro": "ron",  # No "rum" (bibliográfico)
-    "sv": "swe",
-    "th": "tha",
-    "tr": "tur",
-    "uk": "ukr",
-    "vi": "vie",
+    "en": "eng",  # Inglés
+    "es": "spa",  # Español
+    "fr": "fra",  # Francés - No "fre" (bibliográfico)
+    "de": "deu",  # Alemán - No "ger" (bibliográfico)
+    "it": "ita",  # Italiano
+    "pt": "por",  # Portugués
+    "ru": "rus",  # Ruso
+    "ja": "jpn",  # Japonés
+    "ko": "kor",  # Coreano
+    "zh": "zho",  # Chino - No "chi" (bibliográfico)
+    "ar": "ara",  # Árabe
+    "ca": "cat",  # Catalán
+    "cs": "ces",  # Checo - No "cze" (bibliográfico)
+    "da": "dan",  # Danés
+    "nl": "nld",  # Holandés - No "dut" (bibliográfico)
+    "fi": "fin",  # Finlandés
+    "el": "ell",  # Griego - No "gre" (bibliográfico)
+    "he": "heb",  # Hebreo
+    "hi": "hin",  # Hindi
+    "hu": "hun",  # Húngaro
+    "id": "ind",  # Indonesio
+    "no": "nor",  # Noruego
+    "pl": "pol",  # Polaco
+    "ro": "ron",  # Rumano - No "rum" (bibliográfico)
+    "sv": "swe",  # Sueco
+    "th": "tha",  # Tailandés
+    "tr": "tur",  # Turco
+    "uk": "ukr",  # Ucraniano
+    "vi": "vie",  # Vietnamita
+    "sq": "sqi",  # Albanés
+    "hy": "hye",  # Armenio
+    "eu": "eus",  # Vasco
+    "my": "mya",  # Birmano
+    "ka": "kat",  # Georgiano
+    "is": "isl",  # Islandés
+    "mk": "mkd",  # Macedonio
+    "mi": "mri",  # Maorí
+    "ms": "msa",  # Malayo
+    "fa": "fas",  # Persa
+    "sk": "slk",  # Eslovaco
+    "bo": "bod",  # Tibetano
+    "cy": "cym",  # Galés
 }
 
 # Mapeo de códigos bibliográficos obsoletos a terminológicos estándar
@@ -50,6 +63,19 @@ ISO639_2_BIBLIOGRAPHIC_TO_TERMINOLOGIC = {
     "dut": "nld",  # Holandés
     "gre": "ell",  # Griego
     "rum": "ron",  # Rumano
+    "alb": "sqi",  # Albanés
+    "arm": "hye",  # Armenio
+    "baq": "eus",  # Vasco
+    "bur": "mya",  # Birmano
+    "geo": "kat",  # Georgiano
+    "ice": "isl",  # Islandés
+    "mac": "mkd",  # Macedonio
+    "mao": "mri",  # Maorí
+    "may": "msa",  # Malayo
+    "per": "fas",  # Persa
+    "slo": "slk",  # Eslovaco
+    "tib": "bod",  # Tibetano
+    "wel": "cym",  # Galés
 }
 
 # Configuración de detección
