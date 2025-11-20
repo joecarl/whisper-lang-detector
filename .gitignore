@@ -12,3 +12,4 @@ whisper_models/
 .venv/
 tmpaudio
 test.sh
+.env
