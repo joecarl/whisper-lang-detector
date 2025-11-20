@@ -81,7 +81,8 @@ class AudioTools:
         """Obtiene información de las pistas de audio del video."""
         print(f"📹 Analizando archivo: {self.video_path}")
 
-        media_info = MediaInfo.parse(self.video_path)
+        # Usar 'replace' para manejar caracteres unicode inválidos en metadatos
+        media_info = MediaInfo.parse(self.video_path, encoding_errors="replace")
         audio_tracks = []
         audio_index = 0  # Contador para índice de audio en ffmpeg (0:a:X)
 
@@ -125,7 +126,7 @@ class AudioTools:
         """Obtiene la duración del video en segundos."""
         cmd = ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", self.video_path]
 
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=True, errors="replace", check=False)
 
         if result.returncode == 0:
             try:
@@ -169,7 +170,7 @@ class AudioTools:
             output_path,
         ]
 
-        result = subprocess.run(cmd, capture_output=True, text=True)
+        result = subprocess.run(cmd, capture_output=True, text=True, errors="replace", check=False)
 
         if result.returncode != 0:
             print(f"  ❌ Error al extraer audio: {result.stderr}")
