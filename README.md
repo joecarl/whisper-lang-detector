@@ -79,7 +79,7 @@ Reemplaza `<your_drive>` con la ruta real de tu unidad o directorio. Por ejemplo
 
 ### Levantar el DevContainer
 
-1. Abre el proyecto en VS Code
+1. Abre la carpeta del proyecto en VS Code
 2. Presiona `F1` o `Ctrl+Shift+P`
 3. Selecciona "Dev Containers: Reopen in Container"
 4. El contenedor se construirá y se instalarán las dependencias automáticamente
@@ -88,7 +88,6 @@ Reemplaza `<your_drive>` con la ruta real de tu unidad o directorio. Por ejemplo
 ## Construcción de imagen docker
 
 ```bash
-cd /home/criatura/dockers/whisper-lang-detector
 docker build -t whisper-lang-detector .
 ```
 
